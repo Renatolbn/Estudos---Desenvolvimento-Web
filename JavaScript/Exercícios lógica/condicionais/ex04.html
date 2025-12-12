@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vogal ou Consoante</title>
+  </head>
+  <script>
+    const letra = prompt("Digite uma letra:");
+    const primeiraLetra = letra.charAt(0).toLowerCase();
+
+    if (!letra || !/[a-zà-ÿ]/i.test(primeiraLetra)) {
+      console.log("Digite apena uma letra!");
+    }
+
+    if (/[aeiouàáâãéêíóôõú]/i.test(primeiraLetra)) {
+      console.log("Vogal");
+    } else {
+      console.log("Consoante");
+    }
+
+    //const primeiraLetra = letra.charAt(0).toLowerCase(); extrai a primeira letra da string letra e a converte para minúscula.
+
+   /* if (!letra || !/[a-zà-ÿ]/i.test(primeiraLetra)) {
+    console.log("Digite apenas uma letra!");
+}
+    * !letra → true se letra for null, undefined ou string vazia (usuário cancelou prompt).
+    * /[a-zà-ÿ]/i.test() → true se primeiraLetra for A-Z (maiúscula/minúscula) OU acentos (à-ÿ), false caso contrário.
+    * || (OR lógico) → condição é true se QUALQUER parte for inválida.
+    * Resultado: executa se input vazio OU não for letra/acentuada (números, símbolos, etc.).
+    * Agora aceita "ç", "ã", "é" como letras válidas. */
+
+
+    /* if (/[aeiou]/.test(primeiraLetra)) {
+        console.log("Vogal");
+    } else {
+      console.log("Consoante");
+    }
+      * /[aeiou]/ → classe de caracteres que combina qualquer vogal minúscula (a,e,i,o,u).
+      * .test(primeiraLetra) → retorna true se encontrar vogal, false caso contrário.
+      * Como primeiraLetra já está em minúscula, não precisa flag 'i'.
+      * Se true → executa "Vogal", senão → "Consoante".*/
+  </script>
+  <body></body>
+</html>
