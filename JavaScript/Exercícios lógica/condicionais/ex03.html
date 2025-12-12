@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masculino ou Feminino</title>
+  </head>
+  <script>
+    let genero = prompt("Digite 'M' para masculino ou 'F' para feminino: ")
+      .toUpperCase()
+      .trim();
+
+    if (genero === "M") {
+      console.log("Masculino");
+    } else if (genero === "F") {
+      console.log("Feminino");
+    } else if (!/^[A-Z]$/.test(genero)) {
+      console.log("Deve ser uma LETRA!!");
+    } else {
+      console.log("Outro gênero");
+    }
+
+    // O método .toUpperCase() Converte todos os caracteres alfabéticos de uma string para maiúsculas, retornando uma nova string sem alterar a original, pois strings são imutáveis.​
+
+    // O método .trim() remove espaços em branco (whitespace) do início e do fim de uma string, retornando uma nova string sem alterar a original.
+
+    //(!/^[A-Z]$/.test(genero))  Verifica se não tem 1 caractere e se não é uma única letra maiúscula.
+
+    // O método .test() pertence a expressões regulares (RegExp) e verifica se uma string corresponde ao padrão definido, retornando true ou false.​
+  </script>
+  <body></body>
+</html>

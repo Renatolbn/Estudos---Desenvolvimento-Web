@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de um Círculo</title>
+</head>
+<body>
+    <h1>Calculadora de Área do Círculo</h1>
+    <p id="resultado"></p>
+
+    <script> //No final do <body>, o HTML carrega primeiro, permitindo que o usuário veja o conteúdo imediatamente, enquanto o JS executa depois.​
+        function calcularArea() {
+            let raio = parseFloat(prompt("Informe o raio do círculo:"));
+            if (isNaN(raio) || raio <= 0) {
+                document.getElementById("resultado").textContent = "Raio inválido!";
+                return;
+            }
+            const area = Math.PI * raio * raio;
+            document.getElementById("resultado").textContent = 
+                `A área do círculo é de: ${area.toFixed(2)}`;
+           console.log("A área do círculo é de: " + area.toFixed(2));
+        }
+        window.onload = calcularArea;  // Executa após página carregar
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <title>Calculator 2.0</title>
+  </head>
+  <body>
+    <div class="calculator calculator-container">
+      <header class="calculator-header">
+        <ul class="nav-tabs">
+          <li class="tab-item active">Calculator</li>
+          <li class="tab-item">Conversion</li>
+        </ul>
+      </header>
+      <div class="display">
+        <p class="display-result" id="result">1</p>
+        <input
+          type="text"
+          class="input-operation display-input"
+          id="operation"
+          placeholder="0"
+          readonly
+        />
+      </div>
+      <div class="keyboard">
+        <div class="keyboard-row">
+          <button type="button" class="key key-clear" data-value="clear">C</button>
+          <button type="button" class="key key-backspace" data-value="backspace">⌫</button>
+          <button type="button" class="key key-operator" data-value="%">%</button>
+          <button type="button" class="key key-operator" data-value="/">/</button>
+        </div>
+        <div class="keyboard-row">
+          <button type="button" class="key key-number" data-value="7">7</button>
+          <button type="button" class="key key-number" data-value="8">8</button>
+          <button type="button" class="key key-number" data-value="9">9</button>
+          <button type="button" class="key key-operator" data-value="*">X</button>
+        </div>
+        <div class="keyboard-row">
+          <button type="button" class="key key-number" data-value="4">4</button>
+          <button type="button" class="key key-number" data-value="5">5</button>
+          <button type="button" class="key key-number" data-value="6">6</button>
+          <button type="button" class="key key-operator" data-value="-">-</button>
+        </div>
+        <div class="keyboard-row">
+          <button type="button" class="key key-number" data-value="1">1</button>
+          <button type="button" class="key key-number" data-value="2">2</button>
+          <button type="button" class="key key-number" data-value="3">3</button>
+          <button type="button" class="key key-operator" data-value="+">+</button>
+        </div>
+        <div class="keyboard-row">
+          <button type="button" class="key key-number" data-value="0">0</button>
+          <button type="button" class="key key-number" data-value=",">,</button>
+          <button type="button" class="key key-operator" data-value="=">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

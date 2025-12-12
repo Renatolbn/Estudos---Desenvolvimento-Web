@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo do Volume de uma Esfera</title>
+  </head>
+  <script>
+      let raio = parseFloat(prompt("Informe o raio da esfera: "));
+
+    const  volume = 4/3 * Math.PI * (Math.pow(raio,3)); 
+
+    console.log(`O volume da esfera é de: ${volume.toFixed(2)}`);
+    
+    alert(`O volume da esfera é de: ${volume.toFixed(2)}`);
+
+    //Math.pow(base, expoente) é a função JavaScript que retorna a base elevada à potência do expoente, como em Math.pow(2, 3) que resulta em 8.​
+    //OBS: Use o operador moderno raio ** 3 em vez de Math.pow(raio, 3) para maior legibilidade.
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversão de Unidades (Temperatura)</title>
+  </head>
+  <script>
+    let fahrenheit = parseFloat(prompt("Temperatura em Fahrenheit: "));
+    const celsius = 5 * ((fahrenheit - 32) / 9);
+
+    console.log(`${fahrenheit}ºF é equivalente a ${celsius.toFixed(2)}°C`);
+
+    /*O $ em ${fahrenheit} e ${celsius.toFixed(2)} faz parte da sintaxe de interpolação dos template literals (ou template strings) do JavaScript ES6.​
+
+    Template literals usam crases (`) em vez de aspas e permitem inserir variáveis ou expressões diretamente com ${}. Isso substitui a concatenação com +, tornando o código mais legível e evitando erros comuns.​*/
+  </script>
+  <body></body>
+</html>

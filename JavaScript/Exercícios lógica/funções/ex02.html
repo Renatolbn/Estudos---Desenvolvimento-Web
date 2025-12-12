@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex02 calcular preços</title>
+  </head>
+  <style>
+    .resultado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #solucao {
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+      align-items: center; /* centraliza verticalmente */
+      height: 200px; /* altura do contêiner */
+      border: 3px solid blue;
+      width: 400px;
+      height: 100px;
+      text-align: center;
+      font-size: 25px;
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <div class="resultado">
+      <h1>Resultado:</h1>
+      <p id="solucao"></p>
+    </div>
+  </body>
+  <script>
+    let precoUnitario = parseFloat(prompt("Preço: "));
+    let quantidade = parseFloat(prompt("Quantidade: "));
+
+    function calcularTotal(precoUnitario, quantidade) {
+      let resultado = precoUnitario * quantidade;
+
+      let elementoP = document.getElementById("solucao");
+
+      if (elementoP) {
+        elementoP.innerHTML = `Total: R$ ${resultado.toFixed(2)}`;
+      }
+    }
+    calcularTotal(precoUnitario, quantidade);
+  </script>
+</html>

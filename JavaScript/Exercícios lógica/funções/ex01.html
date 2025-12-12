@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex01 Saudação</title>
+  </head>
+  <style>
+    .resultado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #solucao {
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+      align-items: center; /* centraliza verticalmente */
+      height: 200px; /* altura do contêiner */
+      border: 3px solid blue;
+      width: 400px;
+      height: 100px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="resultado">
+      <h1>Resultado:</h1>
+      <p id="solucao"></p>
+    </div>
+  </body>
+  <script>
+    function saudar(nome) {
+      //Declara uma variável mensagem que combina uma saudação fixa com o conteúdo da variável nomee adiciona uma quebra de linha HTML ao final.
+      let mensagem = "Olá, " + nome + "! Bem-vindo(a) ao JavaScript. </br>";
+      //Declara a variável elementoP e armazena o elemento HTML com id "solução", ou null se não existir.
+      let elementoP = document.getElementById("solucao");
+
+      //Esse trecho de código verifica se a variável elementoP existe (ou seja, não é null ou undefined). Se existir, ele adiciona (concatena) o conteúdo da variável mensagemao conteúdo HTML já presente dentro do elemento referenciado por elementoP.
+      if (elementoP) {
+        elementoP.innerHTML += mensagem;
+      }
+    }
+
+    saudar("maria");
+    saudar("joão");
+  </script>
+</html>
