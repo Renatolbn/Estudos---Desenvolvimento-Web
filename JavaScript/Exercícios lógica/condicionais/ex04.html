@@ -6,6 +6,8 @@
     <title>Vogal ou Consoante</title>
   </head>
   <script>
+    //Faça um programa que verifique se uma letra digitada é vogal ou consoante.
+
     const letra = prompt("Digite uma letra:");
     const primeiraLetra = letra.charAt(0).toLowerCase();
 
@@ -21,7 +23,7 @@
 
     //const primeiraLetra = letra.charAt(0).toLowerCase(); extrai a primeira letra da string letra e a converte para minúscula.
 
-   /* if (!letra || !/[a-zà-ÿ]/i.test(primeiraLetra)) {
+    /* if (!letra || !/[a-zà-ÿ]/i.test(primeiraLetra)) {
     console.log("Digite apenas uma letra!");
 }
     * !letra → true se letra for null, undefined ou string vazia (usuário cancelou prompt).
@@ -29,7 +31,6 @@
     * || (OR lógico) → condição é true se QUALQUER parte for inválida.
     * Resultado: executa se input vazio OU não for letra/acentuada (números, símbolos, etc.).
     * Agora aceita "ç", "ã", "é" como letras válidas. */
-
 
     /* if (/[aeiou]/.test(primeiraLetra)) {
         console.log("Vogal");
