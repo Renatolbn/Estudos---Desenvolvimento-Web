@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior de Três Números</title>
+  </head>
+  <script>
+    //Faça um programa que leia três números e imprima o maior deles.
+
+    let numero1 = parseFloat(prompt("Digite o primeiro número: "));
+    let numero2 = parseFloat(prompt("Digite o segundo número: "));
+    let numero3 = parseFloat(prompt("Digite o terceiro número: "));
+
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+      console.log("Valor inválido!");
+    } else {
+      let maior = numero1;
+      if (numero2 > maior) maior = numero2;
+      if (numero3 > maior) maior = numero3;
+      console.log(`O número ${maior} é o maior`);
+    }
+
+    /*Alternativa Mais Simples
+    Em JavaScript, use Math.max() para máxima de três números de forma concisa e que lida perfeitamente com empates:
+
+    const maior = Math.max(numero1, numero2, numero3);
+    console.log(`O maior número é ${maior}`); 
+    */
+  </script>
+  <body></body>
+</html>
