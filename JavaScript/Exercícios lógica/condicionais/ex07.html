@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior de três números</title>
+  </head>
+  <script>
+    //Faça um programa que leia três números e imprima o maior e o menor deles.
+
+    let numero1 = parseFloat(prompt("Primeiro número: "));
+    let numero2 = parseFloat(prompt("Segundo número: "));
+    let numero3 = parseFloat(prompt("Terceiro numero: "));
+
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+      console.log("Valor inválido!");
+    } else {
+      const maior = Math.max(numero1, numero2, numero3);
+      const menor = Math.min(numero1, numero2, numero3);
+      console.log(`Maior: ${maior}, Menor: ${menor}`);
+    }
+
+    /* ---Outra solução (Sem Math)---
+
+    let numero1 = parseFloat(prompt("Primeiro número: "));
+    let numero2 = parseFloat(prompt("Segundo número: "));
+    let numero3 = parseFloat(prompt("Terceiro número: "));
+
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+      console.log("Valor inválido!");
+    } else {
+      // Encontra maior
+      let maior = numero1;
+      if (numero2 > maior) maior = numero2;
+      if (numero3 > maior) maior = numero3;
+      
+      // Encontra menor
+      let menor = numero1;
+      if (numero2 < menor) menor = numero2;
+      if (numero3 < menor) menor = numero3;
+
+      console.log(`Maior: ${maior}, Menor: ${menor}`);  
+    }
+    */
+  </script>
+  <body></body>
+</html>
