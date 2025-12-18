@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Destak Video locadora</title>
+  </head>
+  <body>
+    <h1>Destak Vídeo Locadora</h1>
+    <hr />
+    <!--serve para criar uma quebra temática entre seções de conteúdo.-->
+    <div class="input">
+      <p>
+        Título do Filme:
+        <input type="text" id="inTitulo" />
+      </p>
+      <p>
+        Duração (min):
+        <input type="text" id="inDuracao" />
+      </p>
+      <p>
+        <input
+        type="button"
+        value="Converter em horas e minutos"
+        id="btConverter"/>
+      </p>
+    </div>
+    <p id="outTitulo"></p>
+    <p id="outResposta"></p>
+    <script src="videoLocadora.js"></script>
+  </body>
+</html>
