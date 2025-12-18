@@ -13,7 +13,7 @@ function converterDuracao () {
     let horas = Math.floor(duracao / 60);
 
     //Obtém  o resto da divisão entre os números.
-    let minutos =duracao % 60;
+    let minutos = duracao % 60;
 
     //Altera o conteúdo dos parágrafos de resposta.
     outTitulo.textContent = titulo;
