@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Locadora</title>
+  </head>
+  <body>
+    <div class="tela-login">
+      <h1>Locadora de video</h1>
+      <form class="login">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <p>A senha deve conter 6 digitos, letra maiúscula, número, caracter especial.</p>
+        <button type="submit" id="btnLogin">Login</button>
+      </form>
+      <p class="cadastro">
+        Não tem conta?
+        <span id="formCadastro" class="cadastro-link"> Cadastre-se!</span>
+      </p>
+    </div>
+    <script src="./js/login.js" defer></script>
+  </body>
+</html>
+
+
+ <!-- O defer carrega o JS após o HTML sem bloquear a renderização, ideal para interações como login ou validação. No script.js -->

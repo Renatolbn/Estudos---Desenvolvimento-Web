@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'museo';
+    src: url('../fontes/MuseoModerno-VariableFont_wght.ttf') format('trutype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'museo', sans-serif;
+    font-weight: bold;
+}
