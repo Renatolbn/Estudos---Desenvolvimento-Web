@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produto mais Barato</title>
+  </head>
+  <script>
+    //Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+
+    let produto1 = parseFloat(prompt("Informe o valor do primeiro produto: "));
+    let produto2 = parseFloat(prompt("Informe o valor do segundo produto: "));
+    let produto3 = parseFloat(prompt("Informe o valor do terceiro produto: "));
+
+    if (isNaN(produto1) || isNaN(produto2) || isNaN(produto3)) {
+      console.log("Valor inválido");
+    } else {
+      let menorPreco = produto1;
+      let produtoEscolhido = produto1;
+
+      if (produto2 < menorPreco) {
+        menorPreco = produto2;
+        produtoEscolhido = "Produto 2";
+      }
+
+      if (produto3 < menorPreco) {
+        menorPreco = produto3;
+        produtoEscolhido = "Produto 3";
+      }
+      
+      console.log(`Você deve comprar o ${produtoEscolhido} que custa R$ ${menorPreco.toFixed(2)}`);
+    }
+  </script>
+  <body></body>
+</html>
