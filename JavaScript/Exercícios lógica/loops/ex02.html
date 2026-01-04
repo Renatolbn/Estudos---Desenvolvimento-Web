@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validação de Senha</title>
+  </head>
+  <script>
+    /*Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações*/
+
+    let usuario;
+    let senha;
+
+    do {
+      usuario = prompt("digite o usúario: ");
+      senha = prompt("Digite a senha: ");
+
+      if (senha.trim() === usuario.trim()) {
+        alert("Erro: A senha não pode ser igual ao nome do usúario!");
+      }
+    } while (senha.trim() === usuario.trim());
+     /* *Enquanto senha for igual ao usuário, o loop continua.
+        *Quando forem diferentes, o loop para.*/
+
+    alert("Senha válida! Usúario cadastrado com sucesso.");
+    console.log(`Usúario: ${usuario}`);
+    console.log(`Senha: ${senha}`);
+  </script>
+  <body></body>
+</html>
