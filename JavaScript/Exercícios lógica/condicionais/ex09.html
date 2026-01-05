@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordem Decrescente</title>
+  </head>
+  <script>
+    //Faça um programa que leia três números e mostre-os em ordem decrescente.
+
+    let numero1 = parseFloat(prompt("Primeiro número: "));
+    let numero2 = parseFloat(prompt("Segundo número: "));
+    let numero3 = parseFloat(prompt("Terceiro número: "));
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+      console.log("Valor Inválido!!!");
+    } else {
+      let maior;
+      let menor;
+      let meio;
+
+      if (numero1 >= numero2 && numero1 >= numero3) {
+        maior = numero1;
+        if (numero2 >= numero3) {
+          meio = numero2;
+          menor = numero3;
+        } else {
+          meio = numero3;
+          menor = numero2;
+        }
+      } else if (numero2 >= numero3 && numero2 >= numero1) {
+        maior = numero2;
+        if (numero1 >= numero3) {
+          meio = numero1;
+          menor = numero3;
+        } else {
+          meio = numero3;
+          menor = numero1;
+        }
+      } else {
+        maior = numero3;
+        if (numero1 >= numero2) {
+          meio = numero1;
+          menor = numero2;
+        } else {
+          meio = numero2;
+          menor = numero1;
+        }
+      }
+      console.log(`a ordem decrescente é: ${maior}, ${meio}, ${menor}.`);
+    }
+  </script>
+  <body></body>
+</html>
