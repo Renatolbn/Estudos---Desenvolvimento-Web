@@ -4,32 +4,20 @@ function calcularNotas() {
     let outNotasCem = document.getElementById("outNotasCem");
     let outNotasCinquenta = document.getElementById("outNotasCinquenta");
     let outNotasDez = document.getElementById("outNotasDez");
+    let outNotasUm = document.getElementById("outNotasUm")
 
     //Limpa mensagens (caso, segunda execução).
     outNotasCem.textContent = " ";
     outNotasCinquenta.textContent = " ";
     outNotasDez.textContent = " ";
+    outNotasUm.textContent = " ";
 
     let saque = Number(inSaque.value); // converte o contéudo do campo inSaque.
-
-    /*Validações: 
-    
-    O código verifica duas condições:
-    
-    Se o valor foi preenchido corretamente (não é zero ou inválido)
-    Se o valor é múltiplo de 10 (já que só existem notas de 10, 50 e 100)*/
-
+ 
     // Se não preencheu ou NAN (Not a number).
     if (saque == 0 || isNaN(saque)) {
         alert("Informe o valor do saque corretamente");
         inSaque.focus(); // posiciona em inSaque.
-        return;
-    }
-
-    // Verifica se o saque não é múltiplo de 10.
-    if (saque % 10 != 0) {
-        alert("valor inválido para notas disponíveis (R$ 10, 50, 100)");
-        inSaque.focus();
         return;
     }
 
@@ -39,6 +27,8 @@ function calcularNotas() {
     let notasCinquenta = Math.floor(resto / 50);
     resto = resto % 50;
     let notasDez = Math.floor(resto / 10);
+    resto = resto % 10;
+    let notasUm = Math.floor(resto / 1);
 
     /*Usa divisão inteira (Math.floor) para calcular quantas notas cabem e o operador módulo (%) para calcular o resto, seguindo uma lógica gulosa (greedy) que prioriza notas maiores.
 Exemplo: Para R$ 380:
@@ -56,6 +46,10 @@ Exemplo: Para R$ 380:
     }
     if (notasDez > 0) {
         outNotasDez.textContent = "Notas de R$ 10: " + notasDez;
+    }
+
+    if (notasUm > 0) {
+        outNotasUm.textContent = "Notas de R$ 1: " + notasUm;
     }
 
 }
@@ -85,7 +79,7 @@ Conectar a função ao botão para que seja executada quando o usuário clicar
 
 Pontos de atenção:
 
-Algoritmo guloso: O código sempre prioriza notas maiores, o que funciona bem para este caso específico (10, 50, 100)
+Algoritmo guloso: O código sempre prioriza notas maiores, o que funciona bem para este caso específico (1, 10, 50, 100)
 Limpeza de mensagens: O código limpa os resultados anteriores antes de calcular novamente, evitando confusão
 Feedback ao usuário: Usa alert() para informar erros e focus() para posicionar o cursor no campo correto
 
