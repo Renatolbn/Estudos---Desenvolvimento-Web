@@ -12,6 +12,13 @@ function calcularNotas() {
 
     let saque = Number(inSaque.value); // converte o contéudo do campo inSaque.
 
+    /*Validações: 
+    
+    O código verifica duas condições:
+    
+    Se o valor foi preenchido corretamente (não é zero ou inválido)
+    Se o valor é múltiplo de 10 (já que só existem notas de 10, 50 e 100)*/
+
     // Se não preencheu ou NAN (Not a number).
     if (saque == 0 || isNaN(saque)) {
         alert("Informe o valor do saque corretamente");
