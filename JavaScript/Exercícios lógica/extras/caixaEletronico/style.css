@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*border: 1px red solid;*/
+}
+
+body{
+  display:flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin:10px;
+}
+
+
+
+#imagem {
+width: 400px;
+border: 2px solid lightblue;
+background-color: aliceblue;
+border-radius: 10%;
+margin-right: 50px;
+}
+
+.container {
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-evenly;
+}
+
+.container h1 {
+font-size: 45px;
+font-family: Arial, Helvetica, sans-serif;
+font-style:italic;
+}
