@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Salário</title>
+</head>
+<script>
+/*As Organizações Tabajara resolveram dar um aumento de salário aos seus
+colaboradores e lhe contrataram para desenvolver o programa que irá calcular os
+reajustes. Faça um programa que recebe o salário atual de um colaborador e o
+reajuste segundo o seguinte critério, baseado no salário atual:
+● Salários até R$ 280,00 (inclusive): aumento de 20%;
+● Salários entre R$ 280,00 e R$ 700,00 (inclusive): aumento de 15%;
+● Salários entre R$ 700,00 e R$ 1500,00 (inclusive) : aumento de 10%;
+● Salários maiores que R$ 1500,00: aumento de 5%.
+
+Após o aumento ser realizado, informe na tela:
+a. O salário antes do reajuste;
+b. O percentual de aumento aplicado;
+c. O valor do aumento;
+d. O novo salário, após o aumento.*/
+
+let salarioAtual = parseInt(prompt("informe o salário atual: "));
+
+if (salarioAtual <= 0 || isNaN(salarioAtual)) {
+    console.log("Informe um valor válido!!");
+    alert("Informe um valor válido!!");
+    salarioAtual = parseInt(prompt("informe o salário atual: "));
+};
+
+const salarioNovo = 0;
+const valorAumento = 0;
+
+if (salarioAtual <= 280) {
+    valorAumento = salarioAtual * 0.20;
+    salarioNovo = salarioAtual + valorAumento;
+    console.log(`O salário atual é de: R$ ${salarioAtual.toFixed(2)} com aumento de 20% ficou em R$ ${valorAumento.toFixed(2)} de aumento resultando no valor atual com aumento de R$ ${salarioNovo.toFixed(2)}.`);
+} else if (salarioAtual > 280 && salarioAtual <= 700) {
+    valorAumento = salarioAtual * 0.15;
+    salarioNovo = salarioAtual + valorAumento;
+    console.log(`O salário atual é de: R$ ${salarioAtual.toFixed(2)} com aumento de 15% ficou em R$ ${valorAumento.toFixed(2)} de aumento resultando no valor atual com aumento de R$ ${salarioNovo.toFixed(2)}.`);
+} else if (salarioAtual > 700 && salarioAtual <= 1500) {
+    valorAumento = salarioAtual * 0.10;
+    salarioNovo = salarioAtual + valorAumento;
+    console.log(`O salário atual é de: R$ ${salarioAtual.toFixed(2)} com aumento de 10% ficou em R$ ${valorAumento.toFixed(2)} de aumento resultando no valor atual com aumento de R$ ${salarioNovo.toFixed(2)}.`);
+} else if (salarioAtual > 1500) {
+    valorAumento = salarioAtual * 0.05;
+    salarioNovo = salarioAtual + valorAumento;
+    console.log(`O salário atual é de: R$ ${salarioAtual.toFixed(2)} com aumento de 05% ficou em R$ ${valorAumento.toFixed(2)} de aumento resultando no valor atual com aumento de R$ ${salarioNovo.toFixed(2)}.`);
+} else {
+    console.log("Sem reajuste!!");
+}
+</script>
+<body>
+</body>
+</html>
