@@ -9,6 +9,65 @@ Após login, exiba nome/email no header e desbloqueie funcionalidades; sem login
 
 Logout: limpa localStorage e volta para login.​
 
+***Orientações e melhorias sugeridas***
+Perfeito! Vou te orientar passo a passo:
+
+## 1. Feedback Visual de Erros
+
+**O que fazer:**
+- Crie elementos `<span>` ou `<p>` no HTML abaixo de cada input para exibir mensagens de erro
+- Dê um `id` ou `class` para cada mensagem (exemplo: `id="emailErro"`)
+- No JavaScript, use `document.getElementById()` para pegar esses elementos
+- Quando detectar erro, coloque o texto da mensagem usando `.textContent` ou `.innerHTML`
+- Quando estiver válido, limpe a mensagem (string vazia)
+
+## 2. Validação Completa de Email
+
+**O que melhorar:**
+- Sua validação atual só checa se tem "@", mas e-mails precisam de mais
+- Use uma regex mais completa ou verifique: tem "@", tem texto antes do "@", tem domínio depois (exemplo: ".com")
+- Ou use regex: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` (pesquise sobre cada parte para entender)
+
+## 3. Mensagens de Erro Específicas
+
+**O que fazer:**
+- Para senha: crie mensagens diferentes para cada problema
+  - "Senha muito curta (mínimo 6 caracteres)"
+  - "Falta letra maiúscula"
+  - "Falta número"
+  - "Falta caractere especial"
+- Use vários `if` ou `else if` para checar cada condição separadamente
+- Para email: "Email inválido" ou "Formato de email incorreto"
+
+## 4. Validação no Submit
+
+**O que fazer:**
+- Pegue o formulário com `document.querySelector("form")` ou pelo id
+- Adicione um evento `addEventListener("submit", function(event) { ... })`
+- Dentro da função, use `event.preventDefault()` para impedir o envio
+- Chame suas funções de validação
+- Se ambas retornarem `true`, aí sim deixe o formulário seguir (ou faça o login)
+
+## 5. Indicadores Visuais nos Campos
+
+**O que fazer:**
+- No CSS, crie classes como `.erro` (borda vermelha) e `.sucesso` (borda verde)
+- No JavaScript, use `classList.add()` e `classList.remove()` para adicionar/remover essas classes
+- Quando o campo for inválido: `entrarEmail.classList.add("erro")`
+- Quando for válido: `entrarEmail.classList.remove("erro")` e adicione "sucesso"
+
+## 6. Estrutura Sugerida
+
+**Fluxo de validação:**
+1. Usuário digita e sai do campo (blur) → validação individual
+2. Usuário clica em Login → validação de todos os campos
+3. Se tudo válido → permite login
+4. Se algo inválido → mostra erros e impede submit
+
+**Dica:** Crie uma função `limparErros()` que remove todas as mensagens e classes de erro antes de validar novamente.
+
+Por onde você quer começar? Tem alguma dúvida sobre algum desses pontos?
+
 RF02: Busca e Listagem de Filmes
 Barra de busca no header: <input type="text" placeholder="Buscar filme..."> + botão ícone lupa.
 
