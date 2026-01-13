@@ -10,9 +10,11 @@
   <body>
     <div class="tela-login">
       <h1>Locadora de video</h1>
-      <form class="login">
-        <input type="email" id="email" placeholder="Email" />
-        <input type="password" id="senha" placeholder="Senha" />
+      <form class="login" method="post">
+        <input type="email" id="email" placeholder="Email" required />
+        <span class="erro-msg" id="emailErro"></span>
+        <input type="password" id="senha" placeholder="Senha" required />
+        <span class="erro-msg" id="senhaErro"></span>
         <p>A senha deve conter 6 digitos, letra maiúscula, número, caracter especial.</p>
         <button type="submit" id="btnLogin">Login</button>
       </form>

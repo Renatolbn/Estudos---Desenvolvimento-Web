@@ -33,8 +33,6 @@ body {
 .tela-login h1 {
   font-size: 30px;
   color: rgb(90, 56, 184);
-
-
 }
 
 .tela-login img {
@@ -69,4 +67,12 @@ body {
 .cadastro {
   font-weight: lighter;
   font-size: 10px;
+}
+
+.erro-msg {
+  color: rgb(154, 5, 5);
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  min-height: 18px; /* reserva espaço mesmo quando vazio */
 }

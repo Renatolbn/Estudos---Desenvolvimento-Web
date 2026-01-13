@@ -4,7 +4,7 @@ function calcularNotas() {
     let outNotasCem = document.getElementById("outNotasCem");
     let outNotasCinquenta = document.getElementById("outNotasCinquenta");
     let outNotasDez = document.getElementById("outNotasDez");
-    let outNotasUm = document.getElementById("outNotasUm")
+    let outNotasUm = document.getElementById("outNotasUm");
 
     //Limpa mensagens (caso, segunda execução).
     outNotasCem.textContent = " ";
