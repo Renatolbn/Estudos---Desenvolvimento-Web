@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -7,13 +7,85 @@
   </head>
   <script>
     /*Faça um programa que leia e valide as seguintes informações:
-a. Nome: maior que 3 caracteres;
-b. Idade: entre 0 e 150;
-c. Salário: maior que zero;
-d. Sexo: 'f' ou 'm';
-e. Estado Civil: 's', 'c', 'v', 'd'.*/
+    a. Nome: maior que 3 caracteres;
+    b. Idade: entre 0 e 150;
+    c. Salário: maior que zero;
+    d. Sexo: 'f' ou 'm';
+    e. Estado Civil: 's', 'c', 'v', 'd'.*/
 
+    let nome;
+    let idade;
+    let salario;
+    let sexo;
+    let estadoCivil;
 
+    do {
+      nome = prompt("Informe o nome: ").trim();
+      if (nome.length <= 3) {
+        alert("O nome precisa ter mais de 3 caracteres");
+      } else {
+        console.log(`O nome é: ${nome}`);
+      }
+    } while (nome.length <= 3);
+
+    do {
+      idade = parseInt(prompt("Informe a idade entre 0 e 150: "));
+      if (isNaN(idade) || idade < 0 || idade > 150) {
+        alert("A idade precisa estar entre 0 e 150");
+      } else {
+        console.log(`A idade é: ${idade}`);
+      }
+    } while (isNaN(idade) || idade < 0 || idade > 150);
+
+    do {
+      salario = parseFloat(prompt("Informe o salário: "));
+      if (isNaN(salario) || salario <= 0) {
+        alert("O salario precisa ser maior que 0");
+      } else {
+        console.log(`O salario é: R$ ${salario.toFixed(2)}`);
+      }
+    } while (isNaN(salario) || salario <= 0);
+
+    do {
+      sexo = prompt("Informe o sexo (Feminino 'f'/ Masculino 'm')")
+        .toLowerCase()
+        .trim();
+
+      if (sexo === "f") {
+        console.log(`O sexo é: ${sexo} -> Feminino`);
+      } else if (sexo === "m") {
+        console.log(`O sexo é: ${sexo} -> Masculino`);
+      } else {
+        alert("O sexo precisa ser 'f' ou 'm'");
+      }
+    } while (sexo !== "f" && sexo !== "m");
+
+    do {
+      estadoCivil = prompt(
+        "Informe o estado civil (Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd')"
+      )
+        .toLowerCase()
+        .trim();
+
+      if (estadoCivil === "s") {
+        console.log(`Estado civil é: ${estadoCivil} -> Solteiro`);
+      } else if (estadoCivil === "c") {
+        console.log(`Estado civil é: ${estadoCivil} -> Casado`);
+      } else if (estadoCivil === "v") {
+        console.log(`Estado civil é: ${estadoCivil} -> Viúvo`);
+      } else if (estadoCivil === "d") {
+        console.log(`Estado civil é: ${estadoCivil} -> Divorciado`);
+      } else {
+        alert(
+          "O estado civil precisa ser um dos seguintes: Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd' "
+        );
+      }
+    } while (
+      estadoCivil !== "s" &&
+      estadoCivil !== "c" &&
+      estadoCivil !== "v" &&
+      estadoCivil !== "d"
+    );
   </script>
   <body></body>
 </html>
