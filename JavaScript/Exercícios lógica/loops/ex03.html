@@ -18,74 +18,105 @@
     let salario;
     let sexo;
     let estadoCivil;
+    let input;
 
     do {
       nome = prompt("Informe o nome: ").trim();
-      if (nome.length <= 3) {
-        alert("O nome precisa ter mais de 3 caracteres");
+
+      // Verifica tamanho E se contém só letras/espaços
+      if (nome.length <= 3 || !isNaN(nome) || !/^[a-zA-Z\s]+$/.test(nome)) {
+        alert("Nome inválido! Apenas letras e espaços (mín. 4 caracteres)");
       } else {
         console.log(`O nome é: ${nome}`);
+        break; // ✅ SAI quando válido
       }
-    } while (nome.length <= 3);
+    } while (true);
 
     do {
-      idade = parseInt(prompt("Informe a idade entre 0 e 150: "));
+      input = prompt("Informe a idade entre 0 e 150: ");
+      // Sai se cancelar
+      if (input === null) {
+        console.log("Operação cancelada pelo usuário.");
+        break; // ✅ SAI quando válido
+      }
+
+      idade = parseInt(input);
+      
       if (isNaN(idade) || idade < 0 || idade > 150) {
         alert("A idade precisa estar entre 0 e 150");
       } else {
         console.log(`A idade é: ${idade}`);
+        break; // ✅ SAI quando válido
       }
-    } while (isNaN(idade) || idade < 0 || idade > 150);
+    } while (true);
 
     do {
-      salario = parseFloat(prompt("Informe o salário: "));
+      input = prompt("Informe o salário: ");
+      // Sai se cancelar
+      if (input === null) {
+        console.log("Operação cancelada pelo usuário.");
+        break; // ✅ SAI quando válido
+      }
+
+      salario = parseFloat(input);
       if (isNaN(salario) || salario <= 0) {
         alert("O salario precisa ser maior que 0");
       } else {
         console.log(`O salario é: R$ ${salario.toFixed(2)}`);
+        break; // ✅ SAI quando válido
       }
-    } while (isNaN(salario) || salario <= 0);
+    } while (true);
 
     do {
-      sexo = prompt("Informe o sexo (Feminino 'f'/ Masculino 'm')")
-        .toLowerCase()
-        .trim();
+      input = prompt("Informe o sexo (Feminino 'f'/ Masculino 'm')");
+      // Sai se cancelar
+      if (input === null) {
+        console.log("Operação cancelada pelo usuário.");
+        break;
+      }
+      sexo = input.toLowerCase().trim();
 
       if (sexo === "f") {
         console.log(`O sexo é: ${sexo} -> Feminino`);
+        break; // ✅ SAI quando válido
       } else if (sexo === "m") {
         console.log(`O sexo é: ${sexo} -> Masculino`);
+        break; // ✅ SAI quando válido
       } else {
         alert("O sexo precisa ser 'f' ou 'm'");
       }
-    } while (sexo !== "f" && sexo !== "m");
+    } while (true);
 
     do {
-      estadoCivil = prompt(
-        "Informe o estado civil (Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd')"
-      )
-        .toLowerCase()
-        .trim();
+      input = prompt(
+        "Informe o estado civil (Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd')",
+      );
+      // Sai se cancelar
+      if (input === null) {
+        console.log("Operação cancelada pelo usuário.");
+        break;
+      }
+
+      estadoCivil = input.toLowerCase().trim();
 
       if (estadoCivil === "s") {
         console.log(`Estado civil é: ${estadoCivil} -> Solteiro`);
+        break; // ✅ SAI quando válido
       } else if (estadoCivil === "c") {
         console.log(`Estado civil é: ${estadoCivil} -> Casado`);
+        break; // ✅ SAI quando válido
       } else if (estadoCivil === "v") {
         console.log(`Estado civil é: ${estadoCivil} -> Viúvo`);
+        break; // ✅ SAI quando válido
       } else if (estadoCivil === "d") {
         console.log(`Estado civil é: ${estadoCivil} -> Divorciado`);
+        break; // ✅ SAI quando válido
       } else {
         alert(
-          "O estado civil precisa ser um dos seguintes: Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd' "
+          "O estado civil precisa ser um dos seguintes: Solteiro 's'/ Casado 'c'/ Viúvo 'v'/ Divorciado 'd' ",
         );
       }
-    } while (
-      estadoCivil !== "s" &&
-      estadoCivil !== "c" &&
-      estadoCivil !== "v" &&
-      estadoCivil !== "d"
-    );
+    } while (true);
   </script>
   <body></body>
 </html>
