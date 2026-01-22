@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Peso Ideal II</title>
+  </head>
+  <script>
+    /*Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo
+que calcule seu peso ideal, utilizando as seguintes fórmulas:
+a. Para homens: (72.7*h) - 58
+b. Para mulheres: (62.1*h) - 44.7 */
+
+    let altura = parseFloat(prompt("Informe a altura: "));
+
+    const homens = 72.7 * altura - 58;
+    const mulheres = 62.1 * altura - 44.7;
+
+    console.log(`O peso ideal para homens é de: ${homens.toFixed(2)}`);
+    console.log(`O peso ideal para mulheres é de: ${mulheres.toFixed(2)}`);
+  </script>
+  <body></body>
+</html>
