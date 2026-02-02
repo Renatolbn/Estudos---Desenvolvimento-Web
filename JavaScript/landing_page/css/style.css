@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+code,
+pre {
+  font-family: "Fira Code", "Courier New", monospace;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 20px;
+}
+
+
+.titulo span {
+  color: blue;
+  font-size: 40px;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  list-style: none;
+}
+
+.item-lista {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-lista a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.item-lista:hover {
+ transform: scale(1.1);
+}
+.sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 500px; /* MUDANÇA: min-height em vez de height */
+  padding: 60px 20px; /* ADICIONAR: padding para respirar */
+  gap: 60px;
+  color: white;
+  background: #210791;
+  background: linear-gradient(
+    124deg,
+    rgba(33, 7, 145, 1) 13%,
+    rgba(67, 74, 222, 1) 69%
+  );
+}
+
+.descricao {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 800px; /* ADICIONAR: limita largura do texto */
+}
+
+
+.descricao p {
+  font-style: italic;
+  margin-top: 20px;
+  line-height: 1.6; /* ADICIONAR: melhora legibilidade */
+}
+
+.atributos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%; /* ADICIONAR: garante largura total */
+  max-width: 1200px; /* ADICIONAR: limita em telas muito grandes */
+}
+
+.atributos-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 250px;
+  max-width: 350px;
+  gap: 10px;
+  transition: transform 0.3s ease; /* ADICIONAR: animação no hover */
+}
+
+.atributos-card img {
+  width: 80px;
+  margin-bottom: 20px;
+  background-color: #2b7fff;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.atributos-card h3 {
+  margin-bottom: 8px;
+}
+
+.atributos-card p {
+  font-style: italic;
+  text-align: center;
+}
+
+.btn-filtro {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+  border-color: #666;
+}
+
+.btn-filtro.active {
+  background: #2b7fff;
+  color: white;
+  border-color: #2b7fff;
+}
+
+.btn-voltar {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  border-color: #666;
+}
+.contato {
+  height: 300px;
+  background-color: black;
+  color: white;
+}
+
+.contato img {
+  width: 30px;
+  height: 30px;
+}
+
+/*Responsividade*/
+
+/* Tablets */
+@media (max-width: 768px) {
+  .sobre {
+    min-height: auto;
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .descricao h2 {
+    font-size: 32px;
+  }
+
+  .atributos-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards por linha */
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .sobre {
+    padding: 30px 10px;
+    gap: 25px;
+  }
+
+  .descricao h2 {
+    font-size: 28px;
+  }
+
+  .descricao p {
+    font-size: 14px;
+  }
+
+  .atributos-card {
+    flex: 1 1 100%; /* 1 card por linha */
+    max-width: 100%;
+  }
+
+  .atributos-card img {
+    width: 60px;
+    padding: 15px;
+  }
+}
