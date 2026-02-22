@@ -36,7 +36,7 @@ function renderizarExercicios() {
     // ÁREA DE INPUTS
   
     const areaInputs = document.createElement("div");
-
+    areaInputs.classList.add("area-inputs");
     (exercicio.inputs || []).forEach((inp) => {
       const input = document.createElement("input");
       input.placeholder = inp.label;
