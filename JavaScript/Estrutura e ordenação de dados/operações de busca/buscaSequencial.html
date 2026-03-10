@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Sequencial</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // METODO TRADICIONAL (LOOP)
+
+function buscasequencial(array, alvo) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === alvo) {
+      return i; // Retorna o índice
+    }
+  }
+  return -1; // Não encontrado
+}
+
+const numeros = [40, 15, 7, 3, 82, 24];
+
+const chute = Number(prompt("Advinhe um número do Array: "));
+
+const resultado = buscasequencial(numeros, chute);
+
+if (resultado !== -1) {
+  console.log(`O número ${chute} foi encontrado no índice ${resultado}`);
+} else {
+  console.log("Número não está no Array");
+}
+
+console.log(numeros);
+
+</script>
+</html>
