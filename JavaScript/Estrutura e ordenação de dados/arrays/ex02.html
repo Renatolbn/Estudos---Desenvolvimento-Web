@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma e Média de Elementos</title>
+  </head>
+  <script>
+    //Escreva um programa que receba um array de 5 números inteiros, calcule e exiba a soma e a média dos valores armazenados no array
+
+    let valores = [];
+    let soma = 0;
+    let media = 0;
+
+    for (let i = 0; i < 5; i++) {
+      let numero = Number(prompt(`Informe o ${i + 1}º número inteiro:`));
+      valores.push(numero);
+    }
+
+    for (let i = 0; i < valores.length; i++) {
+      soma = soma + valores[i];
+    }
+
+    media = soma / 2;
+
+    console.log(`Valores do array: ${valores}`);
+
+    console.log(`Soma do array: ${soma}`);
+    console.log(`Média do array: ${media}`);
+  </script>
+  <body></body>
+</html>
