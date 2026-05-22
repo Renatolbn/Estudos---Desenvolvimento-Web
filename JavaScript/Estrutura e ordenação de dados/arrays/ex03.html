@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palíndromo</title>
+  </head>
+  <script>
+    //Desenvolva um programa que receba uma palavra do usuário e a armazene em um array de caracteres. O programa deve verificar se a palavra é um palíndromo (ou seja, se é igual quando lida de trás para frente) e exibir o resultado.
+
+    let palavra = prompt("Digite um nome: ").toUpperCase().trim();
+
+    let caracteres = palavra.split("");
+    console.log(caracteres);
+
+    let novaPalavra = caracteres.reverse().join("");
+    console.log(novaPalavra);
+    
+    if (palavra === novaPalavra) {
+      console.log(`A palavra ${palavra} é um palímodro!!`);
+    } else {
+      console.log(`A palavra ${palavra} não é um palímodro!!`);
+    }
+  </script>
+  <body></body>
+</html>
